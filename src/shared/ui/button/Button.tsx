@@ -16,19 +16,19 @@ export type ButtonProps = {
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
 export const Button = ({
-                         variant = 'primary',
-                         size = 'md',
-                         isLoading = false,
-                         fullWidth = false,
-                         iconLeft,
-                         iconRight,
-                         isActive = false,
-                         children,
-                         className = '',
-                         disabled,
-                         type = 'button',
-                         ...restProps
-                       }: ButtonProps) => {
+  variant = 'primary',
+  size = 'md',
+  isLoading = false,
+  fullWidth = false,
+  iconLeft,
+  iconRight,
+  isActive = false,
+  children,
+  className = '',
+  disabled,
+  type = 'button',
+  ...restProps
+}: ButtonProps) => {
   const isButtonDisabled = disabled || isLoading;
 
   const buttonClasses = [
@@ -44,12 +44,7 @@ export const Button = ({
     .join(' ');
 
   return (
-    <button
-      type={type}
-      disabled={isButtonDisabled}
-      className={buttonClasses}
-      {...restProps}
-    >
+    <button type={type} disabled={isButtonDisabled} className={buttonClasses} {...restProps}>
       {isLoading && <span className={s.spinner} aria-hidden="true" />}
 
       {!isLoading && iconLeft && <span className={s.icon}>{iconLeft}</span>}

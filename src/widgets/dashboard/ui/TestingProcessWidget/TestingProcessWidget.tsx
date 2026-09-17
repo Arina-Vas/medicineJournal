@@ -6,13 +6,12 @@ import { useTestingProcess } from '@/widgets/dashboard/model/hooks/useTestingPro
 export const TestingProcessWidget = () => {
   const { data, isLoading } = useTestingProcess();
 
-  if (isLoading) return (<div className={s.chart}><Spinner /></div>);
+  if (isLoading)
+    return (
+      <div className={s.chart}>
+        <Spinner />
+      </div>
+    );
 
-  return (
-    <DashboardPieChart
-      title="Testing process"
-      className={s.chart}
-      data={data}
-    />
-  );
+  return <DashboardPieChart title="Testing process" className={s.chart} data={data} />;
 };

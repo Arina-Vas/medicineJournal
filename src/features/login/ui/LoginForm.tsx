@@ -95,11 +95,12 @@ export const LoginForm = () => {
           type={'password'}
         />
         <span className={s.errorContent}>{error}</span>
-        <Button isLoading={isPending} disabled={!email || !password}
-                type={'submit'}>{isAccount ? 'Sign in' : 'Sign up'}</Button>
+        <Button isLoading={isPending} disabled={!email || !password} type={'submit'}>
+          {isAccount ? 'Sign in' : 'Sign up'}
+        </Button>
       </form>
       <div>
-        <span>{isAccount ? 'Don\'t have an account? ' : 'Already have an account? '}</span>
+        <span>{isAccount ? "Don't have an account? " : 'Already have an account? '}</span>
         <Button variant={'text'} onClick={toggleAccountMode} type={'button'}>
           {isAccount ? 'Sign up' : 'Sign in'}
         </Button>

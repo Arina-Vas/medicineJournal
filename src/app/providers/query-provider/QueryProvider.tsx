@@ -5,9 +5,9 @@ import { toast } from 'react-toastify';
 
 const queryClient = new QueryClient({
   queryCache: new QueryCache({
-    onError: (error) => {
+    onError: error => {
       const message = getReadableErrorMessage(error);
-      toast.error(message,{position: 'top-right'});
+      toast.error(message, { position: 'top-right' });
     },
   }),
   defaultOptions: {
@@ -17,7 +17,6 @@ const queryClient = new QueryClient({
     },
   },
 });
-
 
 export const QueryProvider = ({ children }: { children: ReactNode }) => {
   return <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>;

@@ -55,10 +55,9 @@ export const medicationsApi = {
     const docSnap = await getDoc(docRef);
 
     if (!docSnap.exists()) {
-      const error = `Medication with id "${id}" not found`
+      const error = `Medication with id "${id}" not found`;
       toast(error);
       throw new Error(error);
-
     }
 
     return {

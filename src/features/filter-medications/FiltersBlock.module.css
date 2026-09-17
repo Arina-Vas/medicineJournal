@@ -41,12 +41,11 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-
 }
 
-.filterTitle{
+.filterTitle {
   width: 100%;
-  font-weight:600;
+  font-weight: 600;
   text-transform: uppercase;
 }
 

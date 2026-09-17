@@ -1,10 +1,10 @@
 import { AdvancedMarker, Map, Pin } from '@vis.gl/react-google-maps';
-import s from '@/widgets/medication-details/Medication.module.css';
+import s from './Map.module.css';
 import { memo } from 'react';
 
 type Props = {
-  coordinates: { lat: string, lng: string } | null,
-  mapId: string,
+  coordinates: { lat: string; lng: string } | null;
+  mapId: string;
 };
 export const MapLocation = memo(({ coordinates, mapId }: Props) => {
   if (!coordinates) return null;

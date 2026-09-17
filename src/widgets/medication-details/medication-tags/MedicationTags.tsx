@@ -12,7 +12,7 @@ export const MedicationTags = ({ locationId }: Props) => {
     <ul className={s.tagList}>
       {medications?.items.map(medication => (
         <li key={medication.id}>
-          <NavButton title={medication.name} className={s.tag} link={`/products/${medication.id}`}/>
+          <NavButton title={medication.name} className={s.tag} link={`/products/${medication.id}`} />
         </li>
       ))}
     </ul>

@@ -16,7 +16,7 @@ export const useSignUpMutation = (onSuccessFn: () => void) => {
       queryClient.invalidateQueries({ queryKey: ['currentUser'] });
       navigate('/');
     },
-    onError: (error) => {
+    onError: error => {
       const readableError = getReadableErrorMessage(error);
       toast(readableError, {
         position: 'top-right',

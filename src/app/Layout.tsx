@@ -10,6 +10,5 @@ export const Layout = () => {
         <Outlet />
       </main>
     </>
-  )
-    ;
+  );
 };

@@ -1,6 +1,6 @@
 import s from './Pagination.module.css';
 import { Button } from '@/shared/ui/button/Button.tsx';
-import Arrow from '@/shared/assets/images/Arrow.svg'
+import Arrow from '@/shared/assets/images/Arrow.svg';
 
 type Props = {
   page: number;
@@ -16,24 +16,24 @@ type Props = {
   pageSize: number;
 };
 export const Pagination = ({
-                             page,
-                             totalItems,
-                             onShowAll,
-                             hasNextPage,
-                             endItem,
-                             startItem,
-                             onNextPage,
-                             onPrevPage,
-                             onPageSizeChange,
-                             showAll,
-                             pageSize,
-                           }: Props) => {
+  page,
+  totalItems,
+  onShowAll,
+  hasNextPage,
+  endItem,
+  startItem,
+  onNextPage,
+  onPrevPage,
+  onPageSizeChange,
+  showAll,
+  pageSize,
+}: Props) => {
   return (
     <div className={s.paginationContainer}>
       <div className={s.pages}>
         {page > 1 && !showAll && (
           <Button variant={'text'} className={s.prevBtn} onClick={onPrevPage} disabled={page === 1 || showAll}>
-            <Arrow/>
+            <Arrow />
           </Button>
         )}
         <span>
@@ -41,7 +41,7 @@ export const Pagination = ({
         </span>
         {hasNextPage && !showAll && (
           <Button variant={'text'} className={s.nextBtn} onClick={onNextPage} disabled={!hasNextPage || showAll}>
-            <Arrow/>
+            <Arrow />
           </Button>
         )}
         <label>
@@ -57,8 +57,12 @@ export const Pagination = ({
 
       <div className={s.pageSize}>
         <span>Page size</span>
-        <Button size={'sm'} isActive={pageSize === 6} variant={'outline'} onClick={() => onPageSizeChange(10)}>6</Button>
-        <Button size={'sm'} isActive={pageSize === 12} variant={'outline'} onClick={() => onPageSizeChange(20)}>12</Button>
+        <Button size={'sm'} isActive={pageSize === 6} variant={'outline'} onClick={() => onPageSizeChange(10)}>
+          6
+        </Button>
+        <Button size={'sm'} isActive={pageSize === 12} variant={'outline'} onClick={() => onPageSizeChange(20)}>
+          12
+        </Button>
       </div>
     </div>
   );

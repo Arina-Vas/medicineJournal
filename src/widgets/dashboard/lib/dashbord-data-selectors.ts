@@ -34,7 +34,7 @@ export const selectTotalTestsByMonth = (items: MedicationItem[]) => {
 
   const monthsMap = createYearMonthsMap(() => ({ current: 0, previous: 0 }));
 
-  items.forEach((item) => {
+  items.forEach(item => {
     const itemDate = parseEndDate(item.endDate);
     if (!itemDate) return;
 
@@ -58,7 +58,7 @@ export const selectTestingProcessByPhase = (items: MedicationItem[]) => {
   const currentYear = new Date().getFullYear();
   const map = new Map<string, { name: MedicationItem['phase']; value: number }>();
 
-  items.forEach((item) => {
+  items.forEach(item => {
     const itemDate = parseEndDate(item.endDate);
     if (!itemDate || itemDate.getFullYear() !== currentYear) return;
 
@@ -76,7 +76,7 @@ export const selectTestedPeopleLastYear = (items: MedicationItem[]) => {
   let tested = 0;
   let nonTested = 0;
 
-  items.forEach((item) => {
+  items.forEach(item => {
     const itemDate = parseEndDate(item.endDate);
     if (!itemDate) return;
 
@@ -107,7 +107,7 @@ export const selectApprovalRateByMonth = (items: MedicationItem[]) => {
     prevCount: 0,
   }));
 
-  items.forEach((item) => {
+  items.forEach(item => {
     const itemDate = parseEndDate(item.endDate);
     if (!itemDate) return;
 
@@ -138,7 +138,7 @@ export const selectStatusByDate = (items: MedicationItem[]) => {
   const map = new Map<string, { completed: number; awaiting: number; originalDate: Date }>();
   const currentYear = new Date().getFullYear();
 
-  items.forEach((item) => {
+  items.forEach(item => {
     const dateObj = parseEndDate(item.endDate);
     if (!dateObj || dateObj.getFullYear() !== currentYear) return;
 
@@ -155,7 +155,7 @@ export const selectStatusByDate = (items: MedicationItem[]) => {
   });
 
   return Array.from(map.values())
-    .map((counts) => {
+    .map(counts => {
       const total = counts.completed + counts.awaiting;
       const completedPercent = Math.round((counts.completed / total) * 100);
 

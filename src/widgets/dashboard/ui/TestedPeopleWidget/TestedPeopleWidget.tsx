@@ -6,7 +6,12 @@ import { useTestedPeople } from '@/widgets/dashboard/model/hooks/useTestedPeople
 export const TestedPeopleWidget = () => {
   const { data, isLoading } = useTestedPeople();
 
-  if (isLoading) return (<div className={s.chart}><Spinner /></div>);
+  if (isLoading)
+    return (
+      <div className={s.chart}>
+        <Spinner />
+      </div>
+    );
 
   return (
     <DashboardPieChart

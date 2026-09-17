@@ -6,9 +6,12 @@ import { useStatusData } from '@/widgets/dashboard/model/hooks/useStatusData.ts'
 export const StatusDataWidget = () => {
   const { data, isLoading } = useStatusData();
 
-  if (isLoading) return (<div className={s.chart}><Spinner /></div>);
+  if (isLoading)
+    return (
+      <div className={s.chart}>
+        <Spinner />
+      </div>
+    );
 
-  return (
-    <DashboardBarChart data={data} dataKeyX={'date'} />
-  );
+  return <DashboardBarChart data={data} dataKeyX={'date'} />;
 };

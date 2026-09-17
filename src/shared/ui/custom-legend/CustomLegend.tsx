@@ -15,7 +15,7 @@ export const CustomLegend = memo(({ payload }: Props): ReactNode => {
 
   return (
     <ul className={s.legendList}>
-      {payload.map((entry) => {
+      {payload.map(entry => {
         const value = (entry?.payload as Payload).value || 0;
         const percent = total > 0 ? Math.round((value / total) * 100) : 0;
         const name = entry?.value;

@@ -12,7 +12,7 @@ createRoot(document.getElementById('root')!).render(
     <AuthProvider>
       <QueryProvider>
         <RouterProvider router={router} />
-        <ToastContainer/>
+        <ToastContainer />
       </QueryProvider>
     </AuthProvider>
   </StrictMode>,

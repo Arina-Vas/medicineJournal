@@ -27,7 +27,9 @@ export const Header = () => {
         </NavButton>
       </div>
       <div className={s.settings}>
-        <Button variant={'outline'} onClick={onLogout}>{user ? 'LogOut' : 'SignIn'}</Button>
+        <Button variant={'outline'} onClick={onLogout}>
+          {user ? 'LogOut' : 'SignIn'}
+        </Button>
       </div>
     </div>
   );

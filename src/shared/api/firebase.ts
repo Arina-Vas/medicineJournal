@@ -6,7 +6,7 @@ import { getAuth } from 'firebase/auth';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: 'AIzaSyCr-Fl1Qm6y-oTYhleFH63_GdeC1AG9g2Q',
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: 'medicine-journal.firebaseapp.com',
   projectId: 'medicine-journal',
   storageBucket: 'medicine-journal.firebasestorage.app',
@@ -19,4 +19,3 @@ const app = initializeApp(firebaseConfig);
 // Initialize Cloud Firestore and get a reference to the service
 export const db = getFirestore(app);
 export const auth = getAuth();
-

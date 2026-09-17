@@ -10,13 +10,13 @@
   gap: 10px;
 }
 
-.nextBtn{
+.nextBtn {
   svg {
     transform: rotate(-90deg);
   }
 }
 
-.prevBtn{
+.prevBtn {
   svg {
     transform: rotate(90deg);
   }

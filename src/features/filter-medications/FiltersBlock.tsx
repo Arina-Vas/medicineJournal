@@ -66,17 +66,24 @@ export const FiltersBlock = ({ onChange }: Props) => {
           <div className={s.filterPopup}>
             <div className={s.filterGroup}>
               <span className={s.filterTitle}>Location</span>
-              <Dropdown label={'Choose location'} options={locations || []} onChange={setLocation}
-                        currentOption={location} />
+              <Dropdown
+                label={'Choose location'}
+                options={locations || []}
+                onChange={setLocation}
+                currentOption={location}
+              />
             </div>
             <div className={s.filterGroup}>
-            <span className={s.filterTitle}>Reaction</span>
+              <span className={s.filterTitle}>Reaction</span>
               <div className={s.buttonGroup}>
                 <Button variant={'outline'} isActive={successReaction} onClick={() => setSuccessReaction(true)}>
                   Successful
                 </Button>
-                <Button variant={'outline'} isActive={successReaction === false}
-                        onClick={() => setSuccessReaction(false)}>
+                <Button
+                  variant={'outline'}
+                  isActive={successReaction === false}
+                  onClick={() => setSuccessReaction(false)}
+                >
                   Unsuccessful
                 </Button>
               </div>

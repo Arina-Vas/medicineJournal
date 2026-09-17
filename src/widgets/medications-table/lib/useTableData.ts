@@ -4,7 +4,6 @@ import type { MedicationFilters } from '@/entities/medication/model/type.ts';
 import { usePagination } from '@/widgets/medications-table/lib/usePagination.ts';
 import { MEDICATIONS_COLUMNS } from '@/widgets/medications-table/lib/config.ts';
 
-
 export const useTableData = (filters: MedicationFilters, sortBy: string, sortDirection: 'asc' | 'desc') => {
   const { name, successReaction, locationId, startDate, endDate } = filters;
 
@@ -65,6 +64,6 @@ export const useTableData = (filters: MedicationFilters, sortBy: string, sortDir
     isFetching,
     resetPagination,
     isError,
-    error
+    error,
   };
 };

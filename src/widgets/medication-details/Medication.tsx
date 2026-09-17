@@ -18,12 +18,12 @@ export const Medication = ({ id }: Props) => {
   const { data, isLoading: isMedicationLoading } = useGetMedicationById(id);
   const { data: location, isLoading: isLocationLoading } = useGetMedicationLocationById(data?.locationId || '');
 
-const isLoading = isMedicationLoading || isLocationLoading;
+  const isLoading = isMedicationLoading || isLocationLoading;
 
   const { street, city, country, building } = location?.address || {};
 
   const handleGetDirection = useCallback(() => {
-    if(!location) return
+    if (!location) return;
     const { lat, lng } = location.coordinates;
 
     const link = `${DIRECTION_BASE_URL}${lat},${lng}`;
@@ -48,10 +48,10 @@ const isLoading = isMedicationLoading || isLocationLoading;
         </div>
         <div className={s.section}>
           <span className={s.title}>Location</span>
-            <MapLocation mapId={MAP_ID} coordinates={location?.coordinates || null} />
+          <MapLocation mapId={MAP_ID} coordinates={location?.coordinates || null} />
           <span>
-          {building} {street}, {city}, {country}
-        </span>
+            {building} {street}, {city}, {country}
+          </span>
           <Button variant={'outline'} iconLeft={<DirectionIcon />} fullWidth onClick={handleGetDirection}>
             Get direction
           </Button>
@@ -60,7 +60,6 @@ const isLoading = isMedicationLoading || isLocationLoading;
           <span className={s.title}>Tags</span>
           <MedicationTags locationId={location?.id || ''} />
         </div>
-
       </div>
     </div>
   );

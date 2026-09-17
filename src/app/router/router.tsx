@@ -3,7 +3,6 @@ import { createBrowserRouter, Navigate } from 'react-router';
 import Login from '@/pages/login/Login.tsx';
 import { Spinner } from '@/shared/ui/spinner/Spinner.tsx';
 
-
 export const router = createBrowserRouter([
   {
     HydrateFallback: Spinner,
@@ -11,8 +10,7 @@ export const router = createBrowserRouter([
       {
         path: '/login',
         element: <Login />,
-      }
-      ,
+      },
       {
         element: <ProtectedRoute />,
         HydrateFallback: Spinner,
@@ -43,6 +41,7 @@ export const router = createBrowserRouter([
             },
           },
         ],
-      }],
+      },
+    ],
   },
 ]);

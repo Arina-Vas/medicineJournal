@@ -3,7 +3,6 @@ import { useMemo } from 'react';
 import { selectTotalTestsByMonth } from '@/widgets/dashboard/lib/dashbord-data-selectors.ts';
 import type { DashboardData, TotalTestsDataItem } from '@/widgets/dashboard/model/types.ts';
 
-
 export const useTotalTests = (): DashboardData<TotalTestsDataItem> => {
   const { data, isLoading } = useMedications({ filters: {}, forCountOnly: true });
 

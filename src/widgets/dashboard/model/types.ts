@@ -1,38 +1,38 @@
 import type { MedicationItem } from '@/entities/medication/model/type.ts';
 
 export interface TotalTestsDataItem {
-  current: number,
-  previous: number,
-  monthName: string
+  current: number;
+  previous: number;
+  monthName: string;
 }
 
 export interface TestingProcessDataItem {
-  name: MedicationItem['phase'],
-  value: number,
-  fill: string
+  name: MedicationItem['phase'];
+  value: number;
+  fill: string;
 }
 
 export interface TestedPeopleDataItem {
-  name: 'tested' | 'nonTested',
-  value: number,
-  fill: string
+  name: 'tested' | 'nonTested';
+  value: number;
+  fill: string;
 }
 
 export interface ApprovalRateDataItem {
-  date: string,
-  current: number,
-  previous: number
+  date: string;
+  current: number;
+  previous: number;
 }
 
 export interface StatusDataItem {
-  date: string,
-  completed: number,
-  rawCompleted: number,
-  awaiting: number,
-  originalDate: Date
+  date: string;
+  completed: number;
+  rawCompleted: number;
+  awaiting: number;
+  originalDate: Date;
 }
 
 export interface DashboardData<T> {
-  data: T[],
-  isLoading: boolean
+  data: T[];
+  isLoading: boolean;
 }

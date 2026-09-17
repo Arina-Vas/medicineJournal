@@ -53,43 +53,40 @@ export const Medications = () => {
       </div>
       <FiltersBlock onChange={onFiltersChange} />
       <div className={s.tableWrapper}>
-
-        {isDataLoading && (
-          <Spinner />
-        )}
+        {isDataLoading && <Spinner />}
 
         <table className={s.table}>
           <thead className={s.columnWrapper}>
-          <tr>
-            {columns.map(col => (
-              <th scope="col" key={col.key}>
-                <div className={s.columnTitle}>
-                  <span>{col.title.toUpperCase()}</span>
-                  {col.isSortable && (
-                    <div>
-                      <button
-                        onClick={() => onSort(col.key)}
-                        className={`${s.sortBtn} ${sortDirection === 'desc' && sortBy === col.key ? s.desc : ''}`}
-                      >
-                        <Arrow />
-                      </button>
-                    </div>
-                  )}
-                </div>
-              </th>
-            ))}
-          </tr>
+            <tr>
+              {columns.map(col => (
+                <th scope="col" key={col.key}>
+                  <div className={s.columnTitle}>
+                    <span>{col.title.toUpperCase()}</span>
+                    {col.isSortable && (
+                      <div>
+                        <button
+                          onClick={() => onSort(col.key)}
+                          className={`${s.sortBtn} ${sortDirection === 'desc' && sortBy === col.key ? s.desc : ''}`}
+                        >
+                          <Arrow />
+                        </button>
+                      </div>
+                    )}
+                  </div>
+                </th>
+              ))}
+            </tr>
           </thead>
           <tbody>
-          {totalItems === 0 && !isDataLoading ? (
-            <tr>
-              <td colSpan={columns.length || 7} className={s.stateCell}>
-                There is nothing to show
-              </td>
-            </tr>
-          ) : (
-            rows?.map(item => <MedicationRow item={item} key={item.id} />)
-          )}
+            {totalItems === 0 && !isDataLoading ? (
+              <tr>
+                <td colSpan={columns.length || 7} className={s.stateCell}>
+                  There is nothing to show
+                </td>
+              </tr>
+            ) : (
+              rows?.map(item => <MedicationRow item={item} key={item.id} />)
+            )}
           </tbody>
         </table>
         <Pagination

@@ -12,7 +12,7 @@ export const getReadableErrorMessage = (error: unknown): string => {
       case 'auth/email-already-in-use':
         return 'The user with this email already exists.';
       case 'permission-denied':
-        return 'You don\'t have enough permissions to perform this action.';
+        return "You don't have enough permissions to perform this action.";
       case 'not-found':
         return 'The requested data was not found.';
       case 'unavailable':

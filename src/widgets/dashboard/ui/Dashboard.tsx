@@ -6,7 +6,6 @@ import { DrugApprovalRateWidget } from '@/widgets/dashboard/ui/DrugApprovalRateW
 import { TotalDataWidget } from '@/widgets/dashboard/ui/TotalDataWidget/TotalDataWidget.tsx';
 
 export const Dashboard = () => {
-
   return (
     <div className={s.dashboardWrapper}>
       <h2 className={s.title}>Testing dashboard</h2>
@@ -14,11 +13,10 @@ export const Dashboard = () => {
         <TotalDataWidget />
 
         <div className={s.charts}>
-          <StatusDataWidget/>
-          <TestedPeopleWidget/>
-          <TestingProcessWidget/>
-          <DrugApprovalRateWidget/>
-
+          <StatusDataWidget />
+          <TestedPeopleWidget />
+          <TestingProcessWidget />
+          <DrugApprovalRateWidget />
         </div>
       </div>
     </div>
