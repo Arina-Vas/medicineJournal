@@ -13,7 +13,7 @@ export const buildMedicationConstraints = ({ filters, forCountOnly = false }: bu
     endDate,
     successReaction,
     cursorDoc = null,
-    pageSize = 10,
+    pageSize = 6,
     sortBy,
     sortDirection = 'asc',
     locationId = '',

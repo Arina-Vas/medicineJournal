@@ -59,10 +59,10 @@ export const Pagination = ({
 
       <div className={s.pageSize}>
         <span>Page size</span>
-        <Button aria-label={'page size 6'} size={'sm'} isActive={pageSize === 6} variant={'outline'} onClick={() => onPageSizeChange(10)}>
+        <Button aria-label={'page size 6'} size={'sm'} isActive={pageSize === 6} variant={'outline'} onClick={() => onPageSizeChange(6)}>
           6
         </Button>
-        <Button aria-label={'page size 12'} size={'sm'} isActive={pageSize === 12} variant={'outline'} onClick={() => onPageSizeChange(20)}>
+        <Button aria-label={'page size 12'} size={'sm'} isActive={pageSize === 12} variant={'outline'} onClick={() => onPageSizeChange(12)}>
           12
         </Button>
       </div>
