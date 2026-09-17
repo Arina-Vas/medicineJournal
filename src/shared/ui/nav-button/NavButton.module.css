@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+
+  font-weight: 500;
+  font-size: 14px;
+  color: #56627d;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}

@@ -1,0 +1,99 @@
+:root {
+  /*colors light theme*/
+  --color-background: #f5f7fa;
+  --color-text-secondary: #56627d;
+  --color-light-gray: #e0e3eb;
+  --color-green: #25b003;
+  --color-primary-blue: #3874ff;
+  --color-text: #141828;
+  --color-white: #ffffff;
+  --color-danger: #ed2000;
+  --color-light-blue: #e5edff;
+  --color-cyan-blue: #0097eb;
+  --color-charcoal: #31374a;
+
+  --color-lavender-gray: #d8dce8;
+  --color-off-white: #f5f7fa;
+  --color-amber-orange: #eb9845;
+  --color-cream: #fff3e2;
+  --color-dark-blue: #0080c7;
+  --color-sky-blue: #25a7ef;
+  --color-periwinkle: #adc5ff;
+  --color-ice-blue: #c7ebff;
+  --color-crimson: #d63f3a;
+  --color-ochre-brown: #d6883a;
+  --color-light-slate: #e3e6ed;
+
+  --color-deep-navy: #0f1353;
+  --color-bright-blue: #437dff;
+  --color-vibrant-green: #53d633;
+  --color-cyan-blue-ligth: #5cbcf0;
+  --color-light-green: #ace4a2;
+  --color-medium-gray: #b1b1b1;
+  --color-pale-green: #dbf9d7;
+  --color-soft-pink: #f8d9d6;
+
+  --color-warm-cream: #f8edd4;
+  --color-coral-salmon: #faa69a;
+  --color-soft-yellow: #fadd9a;
+  --color-white-10: rgba(255, 255, 255, 0.1);
+
+  /*typography*/
+  --font-heading: 'Playfair Display';
+  --font-body: 'Source Sans 3';
+
+  --fs-title: clamp(19px, 1.3vw + 13px, 23px);
+  --fs-large: clamp(16px, 0.7vw + 13px, 18px);
+  --fs-base: clamp(14px, 0.5vw + 12px, 16px);
+  --fs-sm: clamp(12px, 0.4vw + 10px, 14px);
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 800;
+}
+
+[data-theme='dark'] {
+  --white: #f5f1e9;
+  --green: #16a869;
+  --yellow: #f1a81f;
+  --yellow-ligth: #efd883;
+  --red: #ef6666;
+  --brown: #2a2520;
+  --black: #171513;
+
+  --title: #f1ebe2;
+  --text: #a9a096;
+  --border: #3b352f;
+
+  --background: #1c1916;
+  --card: #25211d;
+  --secondary: #302b25;
+  --shadow: #0f0d0b;
+  --favorite: #27332d;
+  --green-disabled: #375948;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  min-width: 375px;
+  /*height: 100dvh;*/
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+button,
+input[type='checkbox'] {
+  cursor: pointer;
+}
