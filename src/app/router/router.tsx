@@ -2,6 +2,7 @@ import { ProtectedRoute } from '@/app/ProtectedRoute.tsx';
 import { createBrowserRouter, Navigate } from 'react-router';
 import Login from '@/pages/login/Login.tsx';
 import { Spinner } from '@/shared/ui/spinner/Spinner.tsx';
+import NotFound from '@/pages/not-found/NotFound.tsx';
 
 export const router = createBrowserRouter([
   {
@@ -40,6 +41,7 @@ export const router = createBrowserRouter([
               return { Component: module.default };
             },
           },
+          { path: "*", element: <NotFound /> },
         ],
       },
     ],

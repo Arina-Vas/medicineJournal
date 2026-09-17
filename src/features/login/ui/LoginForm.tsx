@@ -78,6 +78,7 @@ export const LoginForm = () => {
     <div className={s.formWrapper}>
       <form onSubmit={onSubmit} className={s.form}>
         <Input
+          autoComplete="email"
           id={'email'}
           label={'Email: '}
           isError={!!errorLocale}
@@ -93,6 +94,7 @@ export const LoginForm = () => {
           placeholder={'Enter your password'}
           value={password}
           type={'password'}
+          autoComplete={isAccount ? 'current-password' : 'new-password'}
         />
         <span className={s.errorContent}>{error}</span>
         <Button isLoading={isPending} disabled={!email || !password} type={'submit'}>
