@@ -1,0 +1,27 @@
+import { useEffect, useState, type ReactNode } from 'react';
+import type { Theme } from '@/app/providers/theme-provider/model/types.ts';
+import { ThemeContext } from '@/app/providers/theme-provider/useTheme.ts';
+
+export const ThemeProvider = ({ children }: { children: ReactNode }) => {
+  const [theme, setThemeState] = useState<Theme>(() => {
+    const savedTheme = localStorage.getItem('app-theme') as Theme | null;
+    if (savedTheme) return savedTheme;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  });
+
+  useEffect(() => {
+    const root = document.documentElement;
+    root.setAttribute('data-theme', theme);
+    localStorage.setItem('app-theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setThemeState(prev => (prev === 'light' ? 'dark' : 'light'));
+  };
+
+  const setTheme = (newTheme: Theme) => {
+    setThemeState(newTheme);
+  };
+
+  return <ThemeContext.Provider value={{ theme, toggleTheme, setTheme }}>{children}</ThemeContext.Provider>;
+};

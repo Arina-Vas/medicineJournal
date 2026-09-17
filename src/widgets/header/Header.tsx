@@ -6,9 +6,13 @@ import s from './Header.module.css';
 import { useSignOutMutation } from '@/features/login/lib/useLogin.ts';
 import { useAuth } from '@/app/providers/auth-provider/use-auth.ts';
 import { Button } from '@/shared/ui/button/Button.tsx';
+import { useTheme } from '@/app/providers/theme-provider/useTheme.ts';
+import Light from '@/shared/assets/images/Light.svg';
+import Dark from '@/shared/assets/images/Dark.svg';
 
 export const Header = () => {
   const { mutate: signOut } = useSignOutMutation();
+  const { theme, toggleTheme } = useTheme();
 
   const onLogout = () => {
     signOut();
@@ -27,6 +31,10 @@ export const Header = () => {
         </NavButton>
       </div>
       <div className={s.settings}>
+        <Button onClick={toggleTheme} variant={'outline'}>
+          {theme === 'light' ? <Dark /> : <Light />}
+        </Button>
+
         <Button variant={'outline'} onClick={onLogout}>
           {user ? 'LogOut' : 'SignIn'}
         </Button>

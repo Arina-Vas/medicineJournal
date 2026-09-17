@@ -29,7 +29,7 @@
   z-index: 100;
   width: 320px;
   padding: 16px;
-  background: #ffffff;
+  background-color: var(--color-white);
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   display: flex;

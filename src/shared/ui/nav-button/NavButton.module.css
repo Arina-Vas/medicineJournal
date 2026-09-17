@@ -4,8 +4,8 @@
   align-items: center;
 
   font-weight: 500;
-  font-size: 14px;
-  color: #56627d;
+  font-size: var(--fs-base);
+  color: var(--color-text-secondary);
 }
 
 .icon {

@@ -11,7 +11,7 @@
   flex-direction: column;
   min-height: 400px;
 
-  border: 1px solid #e0e3eb;
+  border: 1px solid var(--color-light-gray);
   border-radius: 6px;
   padding: 16px;
   background-color: var(--color-white);
@@ -21,7 +21,7 @@
 
 .name {
   font-weight: 600;
-  font-size: 32px;
+  font-size: var(--fs-title);
 }
 
 .description {
@@ -29,12 +29,11 @@
 
   span {
     font-weight: 600;
-    font-size: 32px;
+    font-size: var(--fs-title);
   }
 
   p {
     font-weight: 500;
-    font-size: 14px;
   }
 }
 
@@ -55,7 +54,7 @@
 
 .title {
   font-weight: 600;
-  font-size: 24px;
+  font-size: var(--fs-xl);
 }
 
 @media (max-width: 768px) {

@@ -8,7 +8,7 @@
 }
 
 .tag {
-  background-color: #e3e6ed;
+  background-color: var(--color-ligth-gray);
   min-width: 130px;
 
   border-radius: 8px;

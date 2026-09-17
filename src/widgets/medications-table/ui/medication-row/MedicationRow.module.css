@@ -1,14 +1,14 @@
 .row {
   align-items: center;
   justify-content: start;
-  border-bottom: 1px solid #e0e3eb;
+  border-bottom: 1px solid var(--color-light-gray);
   height: 60px;
 
   transition: background-color 0.15s ease;
   cursor: pointer;
 
   &:hover {
-    background-color: #f1f5f9;
+    background-color: var(--color-ligth-gray);
   }
 }
 
@@ -16,7 +16,6 @@
   vertical-align: middle;
   color: var(--color-text-secondary);
   font-weight: 500;
-  font-size: 14px;
 }
 
 .nameCell {
@@ -33,7 +32,7 @@
 }
 
 .processText {
-  font-size: 12px;
+  font-size: var(--fs-sm);
   font-weight: 500;
 }
 
