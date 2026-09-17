@@ -4,6 +4,8 @@ A web application for tracking clinical drug/vaccine trials: browsing and filter
 in a paginated table, viewing trial details on a map, and monitoring overall testing progress on
 an analytics dashboard.
 
+Deployment link: [Medicine Journal](https://arina-vas.github.io/medicineJournal)
+
 ## Features
 
 - **Authentication** — email/password sign in and sign up (Firebase Auth).

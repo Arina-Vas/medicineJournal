@@ -32,7 +32,7 @@ export const Pagination = ({
     <div className={s.paginationContainer}>
       <div className={s.pages}>
         {page > 1 && !showAll && (
-          <Button name={'prev button'} variant={'text'} className={s.prevBtn} onClick={onPrevPage}
+          <Button aria-label={'prev button'} variant={'text'} className={s.prevBtn} onClick={onPrevPage}
                   disabled={page === 1 || showAll}>
             <Arrow />
           </Button>
@@ -41,7 +41,7 @@ export const Pagination = ({
           {startItem} to {endItem} of {totalItems} items{' '}
         </span>
         {hasNextPage && !showAll && (
-          <Button name={'next button'} variant={'text'} className={s.nextBtn} onClick={onNextPage}
+          <Button aria-label={'next button'} variant={'text'} className={s.nextBtn} onClick={onNextPage}
                   disabled={!hasNextPage || showAll}>
             <Arrow />
           </Button>
@@ -59,10 +59,10 @@ export const Pagination = ({
 
       <div className={s.pageSize}>
         <span>Page size</span>
-        <Button size={'sm'} isActive={pageSize === 6} variant={'outline'} onClick={() => onPageSizeChange(10)}>
+        <Button aria-label={'page size 6'} size={'sm'} isActive={pageSize === 6} variant={'outline'} onClick={() => onPageSizeChange(10)}>
           6
         </Button>
-        <Button size={'sm'} isActive={pageSize === 12} variant={'outline'} onClick={() => onPageSizeChange(20)}>
+        <Button aria-label={'page size 12'} size={'sm'} isActive={pageSize === 12} variant={'outline'} onClick={() => onPageSizeChange(20)}>
           12
         </Button>
       </div>

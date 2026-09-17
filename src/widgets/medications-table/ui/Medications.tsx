@@ -66,7 +66,7 @@ export const Medications = () => {
                     {col.isSortable && (
                       <div>
                         <Button
-                          name={`${col.key}-sortDirection`}
+                          aria-label={`${col.key}-sortDirection`}
                           variant="text"
                           onClick={() => onSort(col.key)}
                           className={`${s.sortBtn} ${sortDirection === 'desc' && sortBy === col.key ? s.desc : ''}`}
