@@ -7,6 +7,7 @@ import Arrow from '@/shared/assets/images/Arrow.svg';
 import type { MedicationFilters } from '@/entities/medication/model/type.ts';
 import { MedicationRow } from '@/widgets/medications-table/ui/medication-row/MedicationRow.tsx';
 import { Spinner } from '@/shared/ui/spinner/Spinner.tsx';
+import { Button } from '@/shared/ui/button/Button.tsx';
 
 export const Medications = () => {
   const [filters, setFilters] = useState<MedicationFilters>({});
@@ -64,12 +65,14 @@ export const Medications = () => {
                     <span>{col.title.toUpperCase()}</span>
                     {col.isSortable && (
                       <div>
-                        <button
+                        <Button
+                          name={`${col.key}-sortDirection`}
+                          variant="text"
                           onClick={() => onSort(col.key)}
                           className={`${s.sortBtn} ${sortDirection === 'desc' && sortBy === col.key ? s.desc : ''}`}
                         >
                           <Arrow />
-                        </button>
+                        </Button>
                       </div>
                     )}
                   </div>

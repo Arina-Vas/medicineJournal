@@ -16,23 +16,24 @@ type Props = {
   pageSize: number;
 };
 export const Pagination = ({
-  page,
-  totalItems,
-  onShowAll,
-  hasNextPage,
-  endItem,
-  startItem,
-  onNextPage,
-  onPrevPage,
-  onPageSizeChange,
-  showAll,
-  pageSize,
-}: Props) => {
+                             page,
+                             totalItems,
+                             onShowAll,
+                             hasNextPage,
+                             endItem,
+                             startItem,
+                             onNextPage,
+                             onPrevPage,
+                             onPageSizeChange,
+                             showAll,
+                             pageSize,
+                           }: Props) => {
   return (
     <div className={s.paginationContainer}>
       <div className={s.pages}>
         {page > 1 && !showAll && (
-          <Button variant={'text'} className={s.prevBtn} onClick={onPrevPage} disabled={page === 1 || showAll}>
+          <Button name={'prev button'} variant={'text'} className={s.prevBtn} onClick={onPrevPage}
+                  disabled={page === 1 || showAll}>
             <Arrow />
           </Button>
         )}
@@ -40,7 +41,8 @@ export const Pagination = ({
           {startItem} to {endItem} of {totalItems} items{' '}
         </span>
         {hasNextPage && !showAll && (
-          <Button variant={'text'} className={s.nextBtn} onClick={onNextPage} disabled={!hasNextPage || showAll}>
+          <Button name={'next button'} variant={'text'} className={s.nextBtn} onClick={onNextPage}
+                  disabled={!hasNextPage || showAll}>
             <Arrow />
           </Button>
         )}
