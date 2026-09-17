@@ -1,5 +1,5 @@
 :root,
-[data-theme='light'] {
+[data-theme='LIGHT'] {
   /*colors light theme*/
 
   --color-background: #f5f7fa;
@@ -28,7 +28,7 @@
   --fs-sm: clamp(10px, 0.4vw + 10px, 12px);
 }
 
-[data-theme='dark'] {
+[data-theme='DARK'] {
   --color-background: #0f121d;
   --color-text: #f0f3f9;
   --color-ligth-gray: #232838;

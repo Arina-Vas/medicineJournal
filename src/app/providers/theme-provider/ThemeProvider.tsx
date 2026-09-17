@@ -6,7 +6,7 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   const [theme, setThemeState] = useState<Theme>(() => {
     const savedTheme = localStorage.getItem('app-theme') as Theme | null;
     if (savedTheme) return savedTheme;
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    return window.matchMedia('(prefers-color-scheme: DARK)').matches ? 'DARK' : 'LIGHT';
   });
 
   useEffect(() => {
@@ -16,7 +16,7 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   }, [theme]);
 
   const toggleTheme = () => {
-    setThemeState(prev => (prev === 'light' ? 'dark' : 'light'));
+    setThemeState(prev => (prev === 'LIGHT' ? 'DARK' : 'LIGHT'));
   };
 
   const setTheme = (newTheme: Theme) => {

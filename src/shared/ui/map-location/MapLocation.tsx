@@ -1,15 +1,21 @@
 import { AdvancedMarker, Map, Pin } from '@vis.gl/react-google-maps';
 import s from './Map.module.css';
 import { memo } from 'react';
+import { useTheme } from '@/app/providers/theme-provider/useTheme.ts';
 
 type Props = {
   coordinates: { lat: string; lng: string } | null;
   mapId: string;
 };
 export const MapLocation = memo(({ coordinates, mapId }: Props) => {
+  const { theme } = useTheme();
+
   if (!coordinates) return null;
+
   return (
     <Map
+      key={theme}
+      colorScheme={theme}
       className={s.map}
       fullscreenControl={false}
       rotateControl={false}

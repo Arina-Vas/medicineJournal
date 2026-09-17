@@ -32,7 +32,7 @@ export const Header = () => {
       </div>
       <div className={s.settings}>
         <Button onClick={toggleTheme} variant={'outline'}>
-          {theme === 'light' ? <Dark /> : <Light />}
+          {theme === 'LIGHT' ? <Dark /> : <Light />}
         </Button>
 
         <Button variant={'outline'} onClick={onLogout}>
