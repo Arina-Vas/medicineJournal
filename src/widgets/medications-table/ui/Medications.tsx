@@ -69,6 +69,7 @@ export const Medications = () => {
                           aria-label={`${col.key}-sortDirection`}
                           variant="text"
                           onClick={() => onSort(col.key)}
+                          disabled={totalItems === 0 && !isDataLoading}
                           className={`${s.sortBtn} ${sortDirection === 'desc' && sortBy === col.key ? s.desc : ''}`}
                         >
                           <Arrow />
